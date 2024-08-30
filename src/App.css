@@ -1,38 +1,290 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sidebar {
+  width: 35%;
+  height: 100%;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+.rightside {
+  width: 65%;
+}
+.Container {
+  width: 95%;
+  display: flex;
+  margin: auto;
+  height: 90%;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  overflow-y: hidden;
+}
+.card {
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  height: 180px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.imgphoto img {
+  width: 70%;
+  height: 65%;
+  margin: 20% 15% 0;
+  mix-blend-mode: multiply;
+}
+.imgphoto {
+  width: 30%;
+  background-color: #eaecf0;
+  margin: 20px;
+  height: 76%;
+  position: relative;
+  border-radius: 5px;
+}
+.imgphoto p {
+  margin: 0;
+  text-align: center;
+  font-weight: 550;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 10px;
+  width: 61%;
+  height: 15%;
+  margin: auto;
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  padding: 2px;
+}
+.contentpra h3 {
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+.contentpra h2 {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #8433c1;
+  margin-top: 15px;
+  font-weight: 600;
+}
+.contentpra p {
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  margin-top: 9px;
+}
+.contentpra h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.rightsidecontent {
+  width: 80%;
+  margin: 35% auto;
+}
+.rightsidecontent h3 {
+  font-size: 15px;
+  color: #8433c1;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rightsidecontent h1 {
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rightsidecontent p {
+  text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App-header h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App-header {
+  background-color: black;
+  height: 70px;
+  width: 95%;
+  margin: auto;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.App {
+  background-color: #eaecf0;
+  height: 790px;
+}
+.detailImg {
+  background-color: #eaecf0;
+  width: 92%;
+  margin: 2% auto;
+  height: 450px;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.detailImg img {
+  width: 30%;
+  left: 35%;
+  top: 13%;
+  height: 350px;
+  position: absolute;
+  mix-blend-mode: multiply;
+}
+.rightSideImageContent {
+  margin: 0 4%;
+}
+span {
+  margin-right: 4px;
+  margin-top: 10px;
+}
+.star {
+  margin-top: 10px;
+  display: flex;
+}
+.starcolor {
+  color: #fad900;
+}
+.rating {
+  margin-left: 20px;
+}
+.rightSideImageContent h3 {
+  font-size: 15px;
+  color: #8433c1;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.rightSideImageContent h1 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.rightSideImageContent p {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.price {
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
+/* Back arrow button styling */
+.back-arrow {
+  position: fixed;
+  top: 35px;
+  left: 40px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  z-index: 1001;
+}
+
+.back-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile styles adjustments */
+@media (max-width: 768px) {
+  .Container {
+    display: block; /* Ensure the container layout is adjusted for mobile */
+  }
+
+  .sidebar {
+    width: 100%;
+    display: block; /* Ensure sidebar is visible in mobile view */
+  }
+  .imgphoto img {
+    width: 80%;
+    height: 70%;
+    margin: 15% 10% 0;
+    mix-blend-mode: multiply;
+  }
+  .imgphoto {
+    width: 37%;
+    background-color: #eaecf0;
+    margin: 18px;
+    height: 76%;
+    position: relative;
+    border-radius: 5px;
+}
+
+  .rightside {
+    display: none; /* Hide right-side content on mobile view */
+  }
+  .detailImg img {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+  }
+  .imgphoto p {
+    margin: 0;
+    text-align: center;
+    font-weight: 550;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    height: 15%;
+    margin: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    padding: 2px;
+  }
+
+  .rightside-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 100%;
+  }
+
+  .rightside-mobile .back-arrow {
+    display: block;
+  }
+}
+
+/* loader */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
